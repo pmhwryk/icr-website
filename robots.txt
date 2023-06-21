@@ -1,0 +1,17 @@
+User-agent: Googlebot
+Disallow:
+
+User-agent: AdsBot-Google
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
+User-agent: *
+Disallow:
+
+User-agent: *
+Disallow:/wp-admin/
+Allow:/wp-admin/admin-ajax.php
+
+sitemap: https://itcentre.pk/sitemap.xml
+
