@@ -1,0 +1,17 @@
+ RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.route66.yumnasohail\.com
+RewriteRule ^(.*)$ http://route66.yumnasohail.com$1 [R=permanent,L]
+
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+</IfModule>
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^route66\.yumnasohail\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.route66\.yumnasohail\.com$
+RewriteRule ^/?$ "https\:\/\/route66\.yumnasohail\.com\/" [R=301,L]
+

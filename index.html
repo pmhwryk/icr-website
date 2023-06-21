@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ICR - IT Center Rahimyar Khan</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,700'>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="container ">
+            <div class="row header">
+                <div class="col-sm-4 logo">
+                    <a href="index.html">
+                        <img src="assets/img/Logo-icr.png" class="logo" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 social">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/ITCentreRYK" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>                   
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/itcentreryk/" target="_blank" data-toggle="tooltip" data-placement="top" title="instagram"><i class="fa fa-instagram"></i></a>
+                        </div>
+                </div>
+                <div class="col-sm-4 call-us">
+                    <p> <span><a href="#" class="call-btn"><i class="fa fa-phone">+92 309 9860759</i></a></span> </p>
+                </div>
+            </div>
+        </div>
+        <!-- Coming Soon -->
+        <div class="coming-soon">
+            <div class="inner-bg">
+                <div class="container vertical-center">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>Our 2nd Batch of IT-Center Will Start Soon</h1>
+                            <p>Stay Tuned For More Information</p>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="timer">
+                                        <div class="days-wrapper">
+                                            <span class="days"></span> <br>days
+                                        </div>
+                                        <h1>Days are Remaining</h1>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 social-mobile">
+                                <div class="social-links">
+                                    <a href="https://www.facebook.com/ITCentreRYK" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+                                </div>
+                                <div class="social-links">
+                                    <a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>                   
+                                </div>
+                                <div class="social-links">
+                                    <a href="https://www.instagram.com/itcentreryk/" target="_blank" data-toggle="tooltip" data-placement="top" title="instagram"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 call-us-mobile">
+                                <p> <span><a href="#" class="call-btn"><i class="fa fa-phone">+92 309 9860759</i></a></span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/jquery.countdown.min.js"></script>
+<script>
+        jQuery(document).ready(function() {
+             /*
+	    Countdown initializer
+	*/
+        var now = new Date();
+        var countTo = 17 * 24 * 60 * 60 * 1000 + now.valueOf();    
+        $('.timer').countdown(countTo, function(event) {
+            $(this).find('.days').text(event.offset.totalDays);
+            $(this).find('.hours').text(event.offset.hours);
+            $(this).find('.minutes').text(event.offset.minutes);
+            $(this).find('.seconds').text(event.offset.seconds);
+        });
+
+            $('.social-links a').tooltip();
+        });
+</script>
+    </body>
+
+</html>

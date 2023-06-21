@@ -1,0 +1,25 @@
+
+[16-Nov-2022 05:13:37 Europe/Rome] PHP Warning:  scandir(../uploads/media/itcentre.pk/): failed to open dir: No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[16-Nov-2022 05:13:37 Europe/Rome] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[16-Nov-2022 05:13:37 Europe/Rome] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 462
+[16-Nov-2022 05:13:37 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 470
+[16-Nov-2022 05:13:37 Europe/Rome] PHP Notice:  Undefined variable: files_prevent_duplicate in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
+[16-Nov-2022 05:13:37 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
+[17-Nov-2022 01:44:16 Europe/Rome] PHP Warning:  scandir(../uploads/media/itcentre.pk/): failed to open dir: No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[17-Nov-2022 01:44:16 Europe/Rome] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[17-Nov-2022 01:44:16 Europe/Rome] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 462
+[17-Nov-2022 01:44:16 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 470
+[17-Nov-2022 01:44:16 Europe/Rome] PHP Notice:  Undefined variable: files_prevent_duplicate in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
+[17-Nov-2022 01:44:16 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
+[17-Nov-2022 01:46:13 Europe/Rome] PHP Warning:  scandir(../uploads/media/itcentre.pk/): failed to open dir: No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[17-Nov-2022 01:46:13 Europe/Rome] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[17-Nov-2022 01:46:13 Europe/Rome] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 462
+[17-Nov-2022 01:46:13 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 470
+[17-Nov-2022 01:46:13 Europe/Rome] PHP Notice:  Undefined variable: files_prevent_duplicate in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
+[17-Nov-2022 01:46:13 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
+[17-Nov-2022 01:48:44 Europe/Rome] PHP Warning:  scandir(../uploads/media/itcentre.pk/): failed to open dir: No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[17-Nov-2022 01:48:44 Europe/Rome] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 461
+[17-Nov-2022 01:48:44 Europe/Rome] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 462
+[17-Nov-2022 01:48:44 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 470
+[17-Nov-2022 01:48:44 Europe/Rome] PHP Notice:  Undefined variable: files_prevent_duplicate in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
+[17-Nov-2022 01:48:44 Europe/Rome] PHP Warning:  Invalid argument supplied for foreach() in /home/itsumarc/public_html/itcentre.pk/filemanager/dialog.php on line 949
