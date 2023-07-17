@@ -4,6 +4,7 @@ include APPPATH . '/packages/vendor/autoload.php';
 
 use function GuzzleHttp\Promise\all;
 use Carbon\Carbon;
+use GuzzleHttp\Client;
 
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 class Front extends MX_Controller
@@ -204,7 +205,53 @@ class Front extends MX_Controller
         $data['view_file'] = 'team';
         $this->template->front($data);
     }
+    function our_stundent(){
+        $data['userdata'] = $this->fetchData();
+                // print_r($data);exit;
+        $data['team_slide'] = Modules::run('api/get_specific_table_with_pagination_where_groupby', array('is_deleted' => 0, 'outlet_id' => DEFAULT_OUTLET), 'id asc', 'id', 'instructors', 'name,image,designation', '', '0', '', '', '')->result_array();
+        $data['meta_title'] ="Meet our Team of Experts | ICR";
+        $data['seo_meta_tags'] = $this->get_seo_tags_from_db($url_slug = 'our-team');
+        $this->load->module('template');
+        $data['view_file'] = 'student';
+        $this->template->front($data);
+    }
+    public function fetchData() {
+        require_once('vendor/autoload.php');
+        $url = 'https://laravel.itcentre.pk/api/students/list';
 
+        $client = new \GuzzleHttp\Client([
+            'verify' => false, // Disable SSL verification
+        ]);
+        
+        $response = $client->request('GET', $url);
+        $body = $response->getBody()->getContents();
+        // print_r($body);exit;
+        // $client = new Client();
+        $data = json_decode($body, true);
+        return $data['data'];
+        try {
+            $response = $client->request('GET', $url);
+             exit;
+            $body = $response->getBody()->getContents();
+    
+            $data = json_decode($body, true);
+                $variable = $data;
+    
+            // Return the data or perform any other actions
+            // return $data;
+        } catch (\GuzzleHttp\Exception\RequestException $e) {
+            print_r('error');exit;
+            // Handle the error
+            $data = null; // Set the data variable to null or handle the error in a desired way
+    
+            // Log the error or perform any other actions
+            // You can access the error message using $e->getMessage()
+    
+            // Return the data or perform any other actions
+            return $data;
+        }
+    }
+    
     function success_stories()
     {
         $data['shining_stories'] = Modules::run('api/get_specific_table_with_pagination_where_groupby', array("outlet_id" => DEFAULT_OUTLET, "category" => "shining star"), 'id desc', 'id', 'success_stories', '*', '1', '0', '', '', '')->result_array();
@@ -226,6 +273,8 @@ class Front extends MX_Controller
         $data['view_file'] = 'contact';
         $this->template->front($data);
     }
+
+   
 
 
     function enrollNow()

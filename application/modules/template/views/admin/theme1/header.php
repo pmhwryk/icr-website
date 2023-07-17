@@ -37,6 +37,7 @@
 	<link href="<?= STATIC_ADMIN_CSS ?>toastr.css">
 	<!-- DATETIMEPICKER-->
 	<link rel="stylesheet" href="<?php echo STATIC_ADMIN_CSS ?>bootstrap-fileupload.css">
+
 	<script src="<?php echo STATIC_ADMIN_JS ?>jquery.js"></script>
 	<link rel="stylesheet" href="<?php echo STATIC_ADMIN_CSS ?>dropify.css">
 	<script src="<?php echo STATIC_ADMIN_JS ?>dropify.js"></script>

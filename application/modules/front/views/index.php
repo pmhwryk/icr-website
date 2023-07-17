@@ -7,7 +7,7 @@
     position: fixed;
     bottom: 40px; /* Adjust the desired distance from the bottom */
     left: 20px; /* Adjust the desired distance from the left */
-    background-color: #13c4a1; /* Adjust the desired background color */
+    background-color: #00b0e8; /* Adjust the desired background color */
     color: #fff; /* Adjust the desired text color */
     border: none;
     outline: none;
@@ -40,7 +40,7 @@
     right: -10px;
     width: 30px; /* Adjust the desired width of the sticker */
     height: 30px; /* Adjust the desired height of the sticker */
-    background-color: #fcd34d; /* Adjust the desired background color of the sticker */
+    background-color: #3D3D3D; /* Adjust the desired background color of the sticker */
     border-radius: 50%; /* Adjust the desired border radius to create a circle */
     transform: rotate(45deg);
     z-index: -1;

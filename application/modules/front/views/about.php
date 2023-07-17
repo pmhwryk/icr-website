@@ -29,7 +29,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s">
-                    <img src="<?= STATIC_FRONT_IMAGE ?>our-values.png" alt="Our Values" class="icon">
+                    <img src="<?= STATIC_FRONT_IMAGE ?>our-values.png " alt="Our Values" class="icon">
                     <h3>Our Values</h3>
                     <p style="text-align: justify;">Through our technologically advanced infrastructure, ICR is among the major focus of IT Training. We deliver skills to locals from any part of the world via innovative methodologies that comprise of lectures and dedicated access to equipment racks.</p>
                 </div>

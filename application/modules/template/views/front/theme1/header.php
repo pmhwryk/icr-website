@@ -13,15 +13,18 @@
     <meta charset="utf-8">
     
     <title>
-        <?php 
-        if(empty($meta_title))
-            $meta_title = $seo_meta_tags['meta_title']; 
-        if(!isset($meta_title) || empty($meta_title))
-            $meta_title = "ICR | IT Centre Rahim Yar Khan";
-        ?>
-
-        <?= $meta_title ?> 
-    </title>
+    <?php 
+        if (empty($meta_title)) {
+            if (isset($seo_meta_tags['meta_title'])) {
+                $meta_title = $seo_meta_tags['meta_title'];
+            } else {
+                $meta_title = "ICR | IT Centre Rahim Yar Khan";
+            }
+        }
+        
+        echo $meta_title;
+    ?>
+</title>
     <?php 
         if(isset($seo_meta_tags['meta_data_html']) && !empty($seo_meta_tags['meta_data_html']) ){
             foreach($seo_meta_tags['meta_data_html'] as $meta_html){
@@ -33,10 +36,10 @@
             // $meta_keywords = $seo_meta_tags['meta_keywords'];
             // $meta_description = $seo_meta_tags['meta_description'];
             if(empty($meta_keywords)){
-                $meta_keywords = $seo_meta_tags['meta_keywords'];
+                $meta_keywords = (isset($seo_meta_tags['meta_keywords']) ? $seo_meta_tags['meta_keywords'] : '');
             }
             if(empty($meta_description)){
-                $meta_description = $seo_meta_tags['meta_description'];
+                $meta_description = (isset($seo_meta_tags['meta_description'])  ? $seo_meta_tags['meta_description'] : '');
             }
             if(empty($meta_keywords))
                 $meta_keywords = 'IT centre, ICR, Software training institute';
@@ -49,7 +52,12 @@
     <?php } ?>
 
     <meta name="author" content="<?= BASE_URL ?>">
-    <meta property="og:url" content="<?= end($this->uri->segment_array())!=''?end($this->uri->segment_array()) : BASE_URL ?>">
+    <?php
+    $segments = $this->uri->segment_array(); // Get the segments as an array
+    $lastSegment = end($segments); // Get the last segment from the array
+    $content = ($lastSegment != '') ? $lastSegment : BASE_URL; // Set the appropriate content
+    ?>
+    <meta property="og:url" content="<?php echo $content ?>">
     <meta property="og:title" content="<?= $meta_title ?>">
     <meta property="og:type" content="Brand">
     <meta property="og:site_name" content="<?= DEFAULT_OUTLET_NAME ?>">
@@ -396,6 +404,9 @@
                             </li>
                             <li class="nav-item">
                                 <a href="<?= BASE_URL ?>our-team" class="nav-link">Our Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?= BASE_URL ?>our-student" class="nav-link">Students</a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?= BASE_URL ?>success-stories" class="nav-link">Success Stories</a>

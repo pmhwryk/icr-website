@@ -42,7 +42,7 @@ if (empty($folder))
 if (strpos($_SERVER['HTTP_HOST'], '.') > 0 && $_SERVER['HTTP_HOST'] != '192.168.2.50') {
 	$localname = '';
 } else
-	$localname = 'icr/';
+	$localname = 'icr-website/';
 
 $prefix = 'https';
 if ($strHost == 'localhost')

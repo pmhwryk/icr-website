@@ -98,7 +98,7 @@ else if(strtolower($strHost) == 'construction.doocado.com')
     $hostname = 'localhost';
     $username = 'root';
     $password  = '';
-    $database = 'hwryk_icr';
+    $database = 'icr';
 }
 
 

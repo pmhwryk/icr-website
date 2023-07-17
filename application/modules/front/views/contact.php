@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="contact-info-box">
-                    <div class="icon" style="width: 50px; height: 50px; background-color: #f7f7f7; border-radius: 50%; line-height: 1.8; text-align: center; font-size:30px; color: #ff5d22;">
+                    <div class="icon" style="width: 50px; height: 50px; background-color: #f7f7f7; border-radius: 50%; line-height: 1.8; text-align: center; font-size:30px; color: #00B0E8;">
                         <i class='bx bx-map'></i>
                     </div>
                     <h3>Our Address</h3>
@@ -23,7 +23,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="contact-info-box">
-                    <div class="icon" style="width: 50px; height: 50px; background-color: #f7f7f7; border-radius: 50%; line-height: 1.8; text-align: center; font-size:30px; color: #ff5d22;">
+                    <div class="icon" style="width: 50px; height: 50px; background-color: #f7f7f7; border-radius: 50%; line-height: 1.8; text-align: center; font-size:30px; color: #00B0E8;">
                         <i class='bx bx-phone-call'></i>
                     </div>
                     <h3>Contact</h3>

@@ -125,6 +125,7 @@ $route['blog'] = $front."blog";
 $route['blog-detail/(.+)'] = $front."blog_detail";
 $route['courses'] = $front . 'front_course_listing';
 $route['our-team'] = $front . 'our_team';
+$route['our-student'] = $front . 'our_stundent';
 $route['success-stories'] = $front . 'success_stories';
 $route['contact-us'] = $front . "contact_us";
 $route['contact-submit'] = $front . "contact_submit";
@@ -132,3 +133,5 @@ $strHost = $_SERVER['SERVER_NAME'];
 $strHost = preg_replace('/www./', '', $strHost, 1);
 $route['([a-zA-Z-]+)'] = $front . "page/$1";
 $route['404_override'] = '';
+
+
