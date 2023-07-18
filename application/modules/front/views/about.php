@@ -2,7 +2,7 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>About us</h2>
+            <h1>About us</h1>
             <p>Know More About ICR - IT Centre RYK</p>
         </div>
     </div>

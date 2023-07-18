@@ -2,7 +2,7 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2><?=$course_detail['courseTitle']?> - Course Detail</h2><br>
+            <h1><?=$course_detail['courseTitle']?> - Course Detail</h1><br>
             <!-- <h4 class="text-white"></h4> -->
             <p>Drop us Message for any Query</p>
         </div>

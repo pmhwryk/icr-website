@@ -2,7 +2,7 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>Courses we offer!</h2>
+            <h1>Courses we offer!</h1>
             <p>The Only Purpose Of 'Customer Service'..Is To Change Feelings.</p>
         </div>
     </div>

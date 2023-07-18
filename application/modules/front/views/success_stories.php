@@ -2,7 +2,7 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>Success Stories</h2>
+            <h1>Success Stories</h1>
             <p>Providing Internship opportunities Changes The Whole Equation.</p>
         </div>
     </div>
@@ -23,7 +23,7 @@
             ?>
                     <!-- <div class="single-testimonials-item"> -->
                         <!-- <div class="client-info"> -->
-                            <img src="<?= Modules::run('api/image_path_with_default', SUCCESS_STORIES_IMAGE_PATH, $row['image'], STATIC_FRONT_IMAGE, DEFAULT_PACKAGES); ?>" alt="">
+                            <img src="<?= Modules::run('api/image_path_with_default', SUCCESS_STORIES_IMAGE_PATH, $row['image'], STATIC_FRONT_IMAGE, DEFAULT_PACKAGES); ?>" alt="<?= (isset($row['name']) && !empty($row['name']) ? $row['name'] : "") ?>">
                             <!-- <h3><?= (isset($row['name']) && !empty($row['name']) ? $row['name'] : "") ?></h3> -->
                             <!-- <span><?= (isset($row['job_title']) && !empty($row['job_title']) ? $row['job_title'] : "") ?></span> -->
                         <!-- </div> -->

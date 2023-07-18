@@ -131,7 +131,7 @@ p:last-child {
 
 .section-title h2 span {
   display: inline-block;
-  color: #2e2d2d;
+  color: #0BB4E9;
 }
 
 /* default-btn&optional-btn */
@@ -4675,7 +4675,7 @@ Page Title Area CSS
   text-align: center;
 }
 
-.page-title-content h2 {
+.page-title-content h1 {
   color: #ffffff;
   margin-bottom: 0;
   font-size: 40px;
@@ -6133,7 +6133,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .services-list li a:hover {
-  color: #00b0e8;
+  color: black;
   padding-left: 5px;
 }
 
@@ -6158,7 +6158,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .support-list li a:hover {
-  color: #00b0e8;
+  color: black;
   padding-left: 5px;
 }
 

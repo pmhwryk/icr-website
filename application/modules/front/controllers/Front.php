@@ -28,7 +28,8 @@ class Front extends MX_Controller
         $data['enrolledStudents'] = Modules::run('api/get_specific_table_with_pagination_where_groupby', array('approved_enrollment' => '1'), 'id desc', 'id', 'joining_requests', '*', '', '0', '', '', '')->result_array();
         //$data['seo_meta_tags'] = $this->get_seo_tags_from_db($url_slug = 'it-centre-rahim-yar-khan');
         //$data['meta_title'] = $mydata['meta_title'];
-        $data['meta_description'] = 'ICR is the best trainning institute for computer short courses in rahim yar khan. We offer App development, Web development, graphic designing, Wordpress development, Digital marketing, Software Quality Assurance(SQA), UI/UX Design and Search engine optimization(SEO) Courses in our best IT training institute rahim yar khan.';
+        $data['meta_description'] = '
+        ICR is a top computer training institute in Rahim Yar Khan. We provide courses in App development, Web development, graphic designing, Wordpress development, Digital marketing, Software Quality Assurance (SQA), UI/UX Design, and Search engine optimization (SEO). Join our best IT training institute in Rahim Yar Khan.';
         $data['meta_keywords'] = 'computer short courses in rahim yar khan,computer academy in rahim yar khan,best institute for it courses in rahim yar khan,it courses in rahim yar khan,best training centre in rahim yar khan,it centre in rahim yar khan,it training institute in rahim yar khan';
         $this->load->module('template');
         $data['view_file'] = 'index';
@@ -917,6 +918,7 @@ class Front extends MX_Controller
         echo json_encode(array("status" => $status, "data" => $data, "error_msg" => $error_msg));
     }
 
+
     function stopBreak()
     {
         $status = false;
@@ -996,4 +998,9 @@ class Front extends MX_Controller
         $data['view_file'] = 'listing';
         $this->template->front($data);
     }
+    public function my_function()
+{
+    $canonical_url = site_url('$CI->uri->uri_string()');
+    // ...
+}
 }

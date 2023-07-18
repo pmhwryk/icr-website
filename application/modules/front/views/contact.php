@@ -2,7 +2,7 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>Contact Us</h2>
+            <h1>Contact Us</h1>
             <p>Drop us Message for any Query</p>
         </div>
     </div>

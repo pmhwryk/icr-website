@@ -4,7 +4,7 @@
         <div class="page-title-area">
             <div class="container">
                 <div class="page-title-content">
-                    <h2>Team</h2>
+                    <h1>Team</h1>
                     <p>Meet Our experts always ready to help you.</p>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                             <div class="col-lg-3 col-sm-6">
                                 <div class="single-team-box wow fadeInUp" data-wow-delay=".2s">
                                     <div class="image">
-                                        <img src="<?= Modules::run('api/image_path_with_default',ACTUAL_INSTRUCTOR_IMAGE_PATH,(isset($team_item['image']) && !empty($team_item['image']) ? $team_item['image'] : ''),STATIC_FRONT_IMAGE,DEFAULT_INSTRUCTOR_IMAGE) ?>" alt="image">
+                                        <img src="<?= Modules::run('api/image_path_with_default',ACTUAL_INSTRUCTOR_IMAGE_PATH,(isset($team_item['image']) && !empty($team_item['image']) ? $team_item['image'] : ''),STATIC_FRONT_IMAGE,DEFAULT_INSTRUCTOR_IMAGE) ?>" alt="<?= ((isset($team_item['name']) && !empty($team_item['name'])) ? $team_item['name'] : '') ?>">
                                         <!-- <ul class="social">
                                             <li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>
                                             <li><a href="#" target="_blank"><i class="bx bxl-twitter"></i></a></li>
@@ -55,9 +55,9 @@
                 </div>
             </div>
 
-            <div class="shape10"><img src="<?=STATIC_FRONT_IMAGE?>shape/10.png" alt="image"></div>
-            <div class="shape11"><img src="<?=STATIC_FRONT_IMAGE?>shape/7.png" alt="image"></div>
-            <div class="shape12"><img src="<?=STATIC_FRONT_IMAGE?>shape/11.png" alt="image"></div>
-            <div class="shape13"><img src="<?=STATIC_FRONT_IMAGE?>shape/12.png" alt="image"></div>
+            <div class="shape10"><img src="<?=STATIC_FRONT_IMAGE?>shape/10.png" alt="shape10"></div>
+            <div class="shape11"><img src="<?=STATIC_FRONT_IMAGE?>shape/7.png" alt="shape11"></div>
+            <div class="shape12"><img src="<?=STATIC_FRONT_IMAGE?>shape/11.png" alt="shape12"></div>
+            <div class="shape13"><img src="<?=STATIC_FRONT_IMAGE?>shape/12.png" alt="shape13"></div>
         </section>
         <!-- End Free Trial Area -->

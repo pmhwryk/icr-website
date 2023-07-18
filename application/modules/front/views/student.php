@@ -423,7 +423,7 @@
     <div class="row">
       <div class="col-lg-7 pt-5">
         <div class="page-title-content">
-          <h2>Our Students</h2>
+          <h1>Our Students</h1>
           <p>Unlock the door to endless possibilities with our diverse range of opportunities!</p>
         </div>
         <div class="filter-area">

@@ -1,7 +1,7 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>Free Opportunities</h2>
+            <h1>Free Opportunities</h1>
             <p>Unlock the door to endless possibilities with our diverse range of opportunities!</p>
         </div>
     </div>
