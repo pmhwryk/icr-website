@@ -1269,14 +1269,16 @@ Partner Area CSS
 
 .shape20 {
   position: absolute;
-  right: 55%;
+  /* right: 55%; */
   bottom: 5%;
   z-index: -1;
+  left: 40%;
 }
 
 .shape20 img {
   -webkit-animation: moveLeftBounce 3s linear infinite;
   animation: moveLeftBounce 3s linear infinite;
+  width: 30%;
 }
 
 .shape21 {
@@ -1291,6 +1293,7 @@ Partner Area CSS
 .shape21 img {
   -webkit-animation: moveBounce 5s linear infinite;
   animation: moveBounce 5s linear infinite;
+  width: 30%;
 }
 
 .shape22 {
@@ -1303,6 +1306,7 @@ Partner Area CSS
 .shape22 img {
   -webkit-animation: animationFramesOne 20s infinite linear;
   animation: animationFramesOne 20s infinite linear;
+
 }
 
 .shape23 {
@@ -5671,11 +5675,14 @@ Features Area CSS
   left: 5%;
   top: 0;
   z-index: -1;
+
 }
+
 
 .shape14 img {
   -webkit-animation: moveLeftBounce 5s linear infinite;
   animation: moveLeftBounce 5s linear infinite;
+  width: 20%;
 }
 
 .shape15 {
@@ -5683,13 +5690,24 @@ Features Area CSS
   right: 2%;
   top: 4%;
   z-index: -1;
+  width: 20%;
 }
-
+.shape15 img{
+  -webkit-animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
+  width: 40%;
+}
 .shape16 {
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: -1;
+
+}
+.shape16 img{
+  -webkit-animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
+  width: 40%;
 }
 
 .shape17 {
@@ -5697,6 +5715,12 @@ Features Area CSS
   right: 0;
   bottom: 0;
   z-index: -1;
+
+}
+.shape17 img{
+  -webkit-animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
+  width: 30%;
 }
 
 .shape18 {
@@ -5704,6 +5728,12 @@ Features Area CSS
   z-index: -1;
   right: 20%;
   top: 32%;
+
+}
+.shape18 img{
+  -webkit-animation: moveLeftBounce 5s linear infinite;
+  animation: moveLeftBounce 5s linear infinite;
+  width: 20%;
 }
 
 /*================================================
@@ -5736,9 +5766,10 @@ Free Trial Area CSS
 
 .shape10 {
   position: absolute;
-  right: 30%;
+  /* right: 30%; */
   bottom: 25%;
   z-index: -1;
+  left: 60%;
 }
 
 .shape10 img {
@@ -5750,6 +5781,7 @@ Free Trial Area CSS
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  width: 30%;
 }
 
 .shape11 {
@@ -5762,6 +5794,7 @@ Free Trial Area CSS
 .shape11 img {
   -webkit-animation: moveBounce 5s linear infinite;
   animation: moveBounce 5s linear infinite;
+  width: 20%;
 }
 
 .shape12 {
@@ -5780,13 +5813,15 @@ Free Trial Area CSS
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  width: 20%;
 }
 
 .shape13 {
   position: absolute;
-  right: 18%;
+  /* right: 18%; */
   bottom: 60%;
   z-index: -1;
+  left: 80%;
 }
 
 .shape13 img {
@@ -5798,6 +5833,7 @@ Free Trial Area CSS
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  width: 30%;
 }
 
 /*================================================
@@ -6066,8 +6102,8 @@ Footer Area CSS
   width: 100%;
   height: 100%;
   z-index: -1;
-  -webkit-animation: imageChangeTwo 1s linear 1s infinite;
-  animation: imageChangeTwo 1s linear 1s infinite;
+  -webkit-animation: imageChangeTwo 1s linear 1s infinite !important;
+  animation: imageChangeTwo 1s linear 1s infinite !important;
   background-image: url(../img/footer-shape2.png);
   background-position: center center;
   background-size: cover;

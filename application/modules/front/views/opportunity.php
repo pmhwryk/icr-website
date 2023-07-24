@@ -148,11 +148,11 @@
             }
         </script>
 
-        <div class="shape14"><img src="<?= STATIC_FRONT_IMAGE ?>shape/13.png" alt="image"></div>
-        <div class="shape15"><img src="<?= STATIC_FRONT_IMAGE ?>shape/14.png" alt="image"></div>
-        <div class="shape16"><img src="<?= STATIC_FRONT_IMAGE ?>shape/15.png" alt="image"></div>
-        <div class="shape17"><img src="<?= STATIC_FRONT_IMAGE ?>shape/16.png" alt="image"></div>
-        <div class="shape18"><img src="<?= STATIC_FRONT_IMAGE ?>shape/17.png" alt="image"></div>
+        <div class="shape14"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 2.png" alt="image"></div>
+        <div class="shape15"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 3.png" alt="image"></div>
+        <div class="shape16"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 4.png" alt="image"></div>
+        <div class="shape17"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 5.png" alt="image"></div>
+        <div class="shape18"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 6.png" alt="image"></div>
     </div>
 </div>
 <!-- End Subscribe Area -->

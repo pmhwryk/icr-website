@@ -120,9 +120,9 @@
             <p>Future belongs to those, who learn more skills and combine them in creative ways.</p>
         </div>
     </div>
-    <div class="shape10"><img src="<?= STATIC_FRONT_IMAGE ?>shape/10.png" alt="image"></div>
-    <div class="shape11"><img src="<?= STATIC_FRONT_IMAGE ?>shape/7.png" alt="image"></div>
-    <div class="shape12"><img src="<?= STATIC_FRONT_IMAGE ?>shape/11.png" alt="image"></div>
-    <div class="shape13"><img src="<?= STATIC_FRONT_IMAGE ?>shape/12.png" alt="image"></div>
+    <div class="shape10"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 2.png" alt="image"></div>
+    <div class="shape11"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 4.png" alt="image"></div>
+    <div class="shape12"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 6.png" alt="image"></div>
+    <div class="shape13"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 7.png" alt="image"></div>
 </section>
 <!-- End Free Trial Area -->

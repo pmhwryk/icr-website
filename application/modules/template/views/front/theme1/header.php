@@ -9,11 +9,21 @@
     $page_url = (isset($meta_tags['page_url']) && !empty($meta_tags['page_url']) ? $meta_tags['page_url'] : 'javascript:void(0);');
     $page_image = (isset($meta_tags['image']) && !empty($meta_tags['image']) ? $meta_tags['image'] : STATIC_FRONT_IMAGE);
     ?>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    
+    <?php
+        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+            $url = "https://";
+        else
+            $url = "http://";
+        // Append the host(domain name, ip) to the URL.   
+        $url .= $_SERVER['HTTP_HOST'];
+
+        // Append the requested resource location to the URL   
+        $url .= $_SERVER['REQUEST_URI'];
+    ?>
+    <link rel="canonical" href="<?= $url; ?>">
     <title>
-    <?php 
+        <?php
         if (empty($meta_title)) {
             if (isset($seo_meta_tags['meta_title'])) {
                 $meta_title = $seo_meta_tags['meta_title'];
@@ -21,34 +31,33 @@
                 $meta_title = "ICR | IT Centre Rahim Yar Khan";
             }
         }
-        
+
         echo $meta_title;
-    ?>
-</title>
-    <?php 
-        if(isset($seo_meta_tags['meta_data_html']) && !empty($seo_meta_tags['meta_data_html']) ){
-            foreach($seo_meta_tags['meta_data_html'] as $meta_html){
-                //print html meta tags
-                echo html_entity_decode($meta_html['meta_tag']."\n&#x09;");
-            }
+        ?>
+    </title>
+    <?php
+    if (isset($seo_meta_tags['meta_data_html']) && !empty($seo_meta_tags['meta_data_html'])) {
+        foreach ($seo_meta_tags['meta_data_html'] as $meta_html) {
+            //print html meta tags
+            echo html_entity_decode($meta_html['meta_tag'] . "\n&#x09;");
         }
-        else{
-            // $meta_keywords = $seo_meta_tags['meta_keywords'];
-            // $meta_description = $seo_meta_tags['meta_description'];
-            if(empty($meta_keywords)){
-                $meta_keywords = (isset($seo_meta_tags['meta_keywords']) ? $seo_meta_tags['meta_keywords'] : '');
-            }
-            if(empty($meta_description)){
-                $meta_description = (isset($seo_meta_tags['meta_description'])  ? $seo_meta_tags['meta_description'] : '');
-            }
-            if(empty($meta_keywords))
-                $meta_keywords = 'IT centre, ICR, Software training institute';
-            if(empty($meta_description))
-                $meta_description ='IT Centre is the top leading IT training institute in RYK. ICR has been providing quality IT education since 2018. More than 500+ students got IT Skills.';
-    ?>
-    <!-- Page Meta Tags -->
-    <meta name="keywords" content="<?= $meta_keywords ?>">
-    <meta name="description" content="<?= $meta_description ?>">
+    } else {
+        // $meta_keywords = $seo_meta_tags['meta_keywords'];
+        // $meta_description = $seo_meta_tags['meta_description'];
+        if (empty($meta_keywords)) {
+            $meta_keywords = (isset($seo_meta_tags['meta_keywords']) ? $seo_meta_tags['meta_keywords'] : '');
+        }
+        if (empty($meta_description)) {
+            $meta_description = (isset($seo_meta_tags['meta_description']) ? $seo_meta_tags['meta_description'] : '');
+        }
+        if (empty($meta_keywords))
+            $meta_keywords = 'IT centre, ICR, Software training institute';
+        if (empty($meta_description))
+            $meta_description = 'IT Centre is the top leading IT training institute in RYK. ICR has been providing quality IT education since 2018. More than 500+ students got IT Skills.';
+        ?>
+        <!-- Page Meta Tags -->
+        <meta name="keywords" content="<?= $meta_keywords ?>">
+        <meta name="description" content="<?= $meta_description ?>">
     <?php } ?>
 
     <meta name="author" content="<?= BASE_URL ?>">
@@ -61,11 +70,13 @@
     <meta property="og:title" content="<?= $meta_title ?>">
     <meta property="og:type" content="Brand">
     <meta property="og:site_name" content="<?= DEFAULT_OUTLET_NAME ?>">
-    <meta property="og:description" content="<?= $meta_description!=''?  $meta_description : 'IT Centre is the top leading IT training institute in RYK. ICR has been providing quality IT education since 2018. More than 500+ students got IT Skills.' ?>">
+    <meta property="og:description"
+        content="<?= $meta_description != '' ? $meta_description : 'IT Centre is the top leading IT training institute in RYK. ICR has been providing quality IT education since 2018. More than 500+ students got IT Skills.' ?>">
     <meta property="og:image" content="<?= $page_image ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- FavIcon -->
-    <link rel="icon" type="image/png" href="<?= Modules::run('api/image_path_with_default', ACTUAL_GENERAL_SETTING_IMAGE_PATH, (isset($general_setting['fav_icon']) && !empty($general_setting['fav_icon']) ? $general_setting['fav_icon'] : ''), STATIC_FRONT_IMAGE, 'favicon.png'); ?>">
+    <link rel="icon" type="image/png"
+        href="<?= Modules::run('api/image_path_with_default', ACTUAL_GENERAL_SETTING_IMAGE_PATH, (isset($general_setting['fav_icon']) && !empty($general_setting['fav_icon']) ? $general_setting['fav_icon'] : ''), STATIC_FRONT_IMAGE, 'favicon.png'); ?>">
     <!-- Bootstrap Min CSS -->
     <link rel="stylesheet" href="<?= STATIC_FRONT_ASSETS ?>css/bootstrap.min.css">
     <!-- Animate Min CSS -->
@@ -94,26 +105,26 @@
     <!-- Meta Pixel Code -->
 
     <!-- Start SEO Schema -->
-    
-<script src="//code.tidio.co/v4jaoozj1dgxz6ryfshbtn7dov2rcjlb.js" async></script>
 
-    <?php 
+    <script src="//code.tidio.co/v4jaoozj1dgxz6ryfshbtn7dov2rcjlb.js" async></script>
 
-        function clean($string) {
-            $rep = ["'",'"',",","(",")","[","]","/",";"];
-            $string = str_replace($rep, '', $string); // Replaces all spaces with hyphens.
-            return preg_replace('/[^A-Za-z0-9\-]/', ' ', $string); // Removes special chars.
-        }
-        
-        if(isset($course_detail['courseDescrition']) && (!empty($course_detail['courseDescrition'])))
-            $courseDescription = substr(strip_tags($course_detail['courseDescrition']), 0, 1000);
-        
-        elseif(!empty($meta_description))
-            $courseDescription = $meta_description;
-        else
-            $courseDescription = "IT Centre is the top leading IT training institute in RYK. ICR has been providing quality IT education since 2018 More than 500+ students got IT Skills. ICR is established in the region to provide tools & resources to our students for polishing their skills hence making their names in the IT market. Most Reliable Technology Provider in the Region Rahim Yar Khan Pakistan No.1 IT Centre Top of the list in Rahim Yar Khan and the other Major City of Pakistan Lahore. Hello World Technologies offering best services for web development, app development, graphic designing, UI/UX desinging.";
+    <?php
 
-        $courseDescription = clean($courseDescription);
+    function clean($string)
+    {
+        $rep = ["'", '"', ",", "(", ")", "[", "]", "/", ";"];
+        $string = str_replace($rep, '', $string); // Replaces all spaces with hyphens.
+        return preg_replace('/[^A-Za-z0-9\-]/', ' ', $string); // Removes special chars.
+    }
+
+    if (isset($course_detail['courseDescrition']) && (!empty($course_detail['courseDescrition'])))
+        $courseDescription = substr(strip_tags($course_detail['courseDescrition']), 0, 1000);
+    elseif (!empty($meta_description))
+        $courseDescription = $meta_description;
+    else
+        $courseDescription = "IT Centre is the top leading IT training institute in RYK. ICR has been providing quality IT education since 2018 More than 500+ students got IT Skills. ICR is established in the region to provide tools & resources to our students for polishing their skills hence making their names in the IT market. Most Reliable Technology Provider in the Region Rahim Yar Khan Pakistan No.1 IT Centre Top of the list in Rahim Yar Khan and the other Major City of Pakistan Lahore. Hello World Technologies offering best services for web development, app development, graphic designing, UI/UX desinging.";
+
+    $courseDescription = clean($courseDescription);
     ?>
     <script type="application/ld+json">
         {
@@ -124,8 +135,8 @@
             "@id": "<?= 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>",
             "openingHours":"Mo,Tu,We,Th,Fr 08:00-20:00"
           },
-          "headline": "<?=isset($course_detail['courseTitle'])? $course_detail['courseTitle'] : $meta_title?>",
-          "description": "<?=$courseDescription?>",
+          "headline": "<?= isset($course_detail['courseTitle']) ? $course_detail['courseTitle'] : $meta_title ?>",
+          "description": "<?= $courseDescription ?>",
           "image": "https://www.itcentre.pk/uploads/courses/41c2b6f92-app-dev.webp",
           "url" : "https://www.itcentre.pk",
           "location":{
@@ -155,9 +166,9 @@
 
 
     <script>
-        ! function(f, b, e, v, n, t, s) {
+        ! function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
-            n = f.fbq = function() {
+            n = f.fbq = function () {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
@@ -176,7 +187,8 @@
         fbq('init', '331273985567177');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=331273985567177&ev=PageView&noscript=1" /></noscript>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=331273985567177&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XQV8QGVS5"></script>
@@ -353,9 +365,10 @@
                 bottom: 30px !important;
             }
         }
-        .spacle-nav .navbar .navbar-nav .nav-item a{
-            margin-left:10px !important;
-            margin-right:10px !important;
+
+        .spacle-nav .navbar .navbar-nav .nav-item a {
+            margin-left: 10px !important;
+            margin-right: 10px !important;
         }
     </style>
 </head>
@@ -378,7 +391,8 @@
                 <div class="spacle-responsive-menu">
                     <div class="logo">
                         <a href="<?= BASE_URL ?>">
-                            <img src="<?= Modules::run('api/image_path_with_default', ACTUAL_GENERAL_SETTING_IMAGE_PATH, (isset($general_setting['image']) && !empty($general_setting['image']) ? $general_setting['image'] : ''), STATIC_FRONT_IMAGE, DEFAULT_LOGO); ?>" style="max-width: 250px;" alt="logo">
+                            <img src="<?= Modules::run('api/image_path_with_default', ACTUAL_GENERAL_SETTING_IMAGE_PATH, (isset($general_setting['image']) && !empty($general_setting['image']) ? $general_setting['image'] : ''), STATIC_FRONT_IMAGE, DEFAULT_LOGO); ?>"
+                                style="max-width: 250px;" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -389,10 +403,11 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="<?= BASE_URL ?>">
-                        <img src="<?= Modules::run('api/image_path_with_default', ACTUAL_GENERAL_SETTING_IMAGE_PATH, (isset($general_setting['image']) && !empty($general_setting['image']) ? $general_setting['image'] : ''), STATIC_FRONT_IMAGE, DEFAULT_LOGO); ?>" style="max-width: 250px;" alt="logo">
+                        <img src="<?= Modules::run('api/image_path_with_default', ACTUAL_GENERAL_SETTING_IMAGE_PATH, (isset($general_setting['image']) && !empty($general_setting['image']) ? $general_setting['image'] : ''), STATIC_FRONT_IMAGE, DEFAULT_LOGO); ?>"
+                            style="max-width: 250px;" alt="logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                        <ul  style="margin-left:13px;font-size:14px;!important " class="navbar-nav">
+                        <ul style="margin-left:13px;font-size:14px;!important " class="navbar-nav">
                             <li class="nav-item">
                                 <a href="<?= BASE_URL ?>" class="nav-link">Home</a>
                             </li>

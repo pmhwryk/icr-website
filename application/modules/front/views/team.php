@@ -57,7 +57,7 @@
 
             <div class="shape10"><img src="<?=STATIC_FRONT_IMAGE?>shape/10.png" alt="shape10"></div>
             <div class="shape11"><img src="<?=STATIC_FRONT_IMAGE?>shape/7.png" alt="shape11"></div>
-            <div class="shape12"><img src="<?=STATIC_FRONT_IMAGE?>shape/11.png" alt="shape12"></div>
-            <div class="shape13"><img src="<?=STATIC_FRONT_IMAGE?>shape/12.png" alt="shape13"></div>
+            <div class="shape12"><img src="<?=STATIC_FRONT_IMAGE?>shape/Frame 2.png" alt="shape12"></div>
+            <div class="shape13"><img src="<?=STATIC_FRONT_IMAGE?>shape/Frame 6.png" alt="shape13"></div>
         </section>
         <!-- End Free Trial Area -->

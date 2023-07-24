@@ -521,7 +521,7 @@
       </div>
       <div class="col-lg-5 py-lg-0 py-5">
         <div class="pt-2">
-          <img src="assets/img/header-search-img.png" alt="">
+          <img src="assets/img/header-search-img (2).png" alt="">
         </div>
       </div>
     </div>
@@ -529,6 +529,7 @@
 
   </div>
 </div>
+
 
 <!-- End Page Title Area -->
 
