@@ -103,8 +103,10 @@
     <!-- jQuery Min JS -->
     <script src="<?= STATIC_FRONT_ASSETS ?>js/jquery.min.js"></script>
     <!-- Meta Pixel Code -->
+	<link href="<?= STATIC_ADMIN_CSS ?>toastr.css">
 
     <!-- Start SEO Schema -->
+    <link rel="stylesheet" href="<?php echo STATIC_ADMIN_CSS?>toastr.css">
 
     <script src="//code.tidio.co/v4jaoozj1dgxz6ryfshbtn7dov2rcjlb.js" async></script>
 

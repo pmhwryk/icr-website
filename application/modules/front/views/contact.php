@@ -1,3 +1,17 @@
+<script src="<?= STATIC_FRONT_ASSETS ?>js/form-validator.min.js"></script>
+<style>
+    .redBorderClass {
+        border: 1px solid red !important;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+</style>
 <!-- Start Page Title Area -->
 <div class="page-title-area">
     <div class="container">
@@ -54,35 +68,35 @@
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name">
+                                        <input type="text" name="name" id="name" class="form-control validatefield" required data-error="Please enter your name" placeholder="Your Name" >
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email">
+                                        <input  type="email" name="email" id="email" class="form-control validatefield" required data-error="Please enter your email" placeholder="Your Email">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone">
+                                    <input type="number" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control validatefield" placeholder="Your Phone" >
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="subject" id="subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
+                                        <input type="text" name="subject" id="subject" class="form-control validatefield" required data-error="Please enter your subject" placeholder="Your Subject">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="6" required data-error="Write your message" placeholder="Your Message"></textarea>
+                                        <textarea name="message" class="form-control validatefield" id="message" cols="30" rows="6" required data-error="Write your message" placeholder="Your Message"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -100,8 +114,23 @@
             </div>
 
             <script type="text/javascript">
+                 function validateForm() {
+        var isValid = true;
+        $('.validatefield').each(function() {
+            if ($(this).val() === '') {
+                $(this).addClass("redBorderClass");
+                isValid = false;
+            } else
+
+                $(this).removeClass("redBorderClass");
+        });
+        return isValid;
+    }
                 $('.contact_submit').on('click', function() {
-                    var form_data = $('.contactForm').serialize();
+                    event.preventDefault();
+                    if (validateForm()) {
+                        var form_data = $('.contactForm').serialize();
+
                     $.ajax({
                         type: 'post',
                         url: '<?= BASE_URL ?>contact-submit',
@@ -109,12 +138,13 @@
                         success: function(data) {
                             if (data.status == true) {
                                 swal("Success!", "Your message has been sent.", "success");
-                                location.reload();
+                                $('.contactForm input, .contactForm textarea').val('');
                             } else {
                                 swal("Error!", "Some Error Occur While updating Profile, We will fix it soon", "error");
                             }
                         }
                     });
+                }
                 });
             </script>
 

@@ -1,3 +1,5 @@
+<script src="<?= STATIC_ADMIN_JS ?>admin_toastr.js"></script>
+
     <div style="text-align: justify;">
         <!-- Start Footer Area -->
         <footer class="footer-area">
@@ -124,3 +126,48 @@
     </body>
 
     </html>
+        <script>
+	function toaster_success_setting() {
+		toastr.options = {
+			"closeButton": true,
+			"debug": false,
+			"newestOnTop": true,
+			"progressBar": true,
+			"positionClass": "toast-top-right",
+			"preventDuplicates": false,
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "5000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+		};
+	}
+	tinymce.init({
+		theme: 'advanced',
+		resize: false,
+		fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
+		selector: "textarea.ckeditor",
+		theme: "modern",
+		width: '100%',
+		height: 500,
+		autoresize_min_height: 500,
+		autoresize_max_height: 800,
+		plugins: [
+			"advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+			"searchreplace wordcount visualblocks code fullscreen visualchars insertdatetime media nonbreaking",
+			"table contextmenu directionality emoticons paste textcolor responsivefilemanager autoresize"
+		],
+		toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent  | fontselect |  fontsizeselect ",
+		toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code | styleselect ",
+		image_advtab: true,
+		external_filemanager_path: "<?= BASE_URL ?>/filemanager/",
+		filemanager_title: "filemanager",
+		external_plugins: {
+			"filemanager": "<?= BASE_URL ?>filemanager/plugin.min.js"
+		}
+	});
+</script>

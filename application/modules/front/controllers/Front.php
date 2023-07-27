@@ -374,35 +374,38 @@ class Front extends MX_Controller
         $data['phone_number'] = $this->input->post('phone_number');
         $data['subject'] = $this->input->post('subject');
         $data['message'] = $this->input->post('message');
+        $data['create_date'] = date('Y-m-d H:i:s');
+        $data['status'] = 1;
+
         $retrun_id = Modules::run('api/insert_into_specific_table', $data, "contact_us");
         if (!empty($retrun_id)) {
             $status = true;
         }
 
         $this->load->library('email');
-        $port = 465;
-        $user = 'contact@itcentre.pk';
-        $pass = 'mf%6$GyGz4jJ';
-        $host = 'ssl://mail.itcentre.pk';
+        // $port = 465;
+        // $user = 'contact@itcentre.pk';
+        // $pass = 'mf%6$GyGz4jJ';
+        // $host = 'ssl://mail.itcentre.pk';
 
-        $config = array(
-            'protocol' => 'smtp',
-            'smtp_host' => $host,
-            'smtp_port' => $port,
-            'smtp_user' =>  $user,
-            'smtp_pass' =>  $pass,
-            'mailtype'  => 'html',
-            'starttls'  => true,
-            'newline'   => "\r\n"
-        );
+        // $config = array(
+        //     'protocol' => 'smtp',
+        //     'smtp_host' => $host,
+        //     'smtp_port' => $port,
+        //     'smtp_user' =>  $user,
+        //     'smtp_pass' =>  $pass,
+        //     'mailtype'  => 'html',
+        //     'starttls'  => true,
+        //     'newline'   => "\r\n"
+        // );
 
-        $this->email->initialize($config);
-        $this->email->from($user, DEFAULT_OUTLET_NAME);
-        $this->email->to('xperttech.ryk@gmail.com');
-        $this->email->subject(DEFAULT_OUTLET_NAME . ' - New Contact Message');
-        $message = $this->load->view('contactEmail', $data, true);
-        $this->email->message($message);
-        $this->email->send();
+        // $this->email->initialize($config);
+        // $this->email->from($user, DEFAULT_OUTLET_NAME);
+        // $this->email->to('xperttech.ryk@gmail.com');
+        // $this->email->subject(DEFAULT_OUTLET_NAME . ' - New Contact Message');
+        // $message = $this->load->view('contactEmail', $data, true);
+        // $this->email->message($message);
+        // $this->email->send();
         header('Content-Type: application/json');
         echo json_encode(array("status" => $status, "data" => $data));
     }

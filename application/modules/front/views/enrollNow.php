@@ -7,7 +7,7 @@
 <div class="page-title-area">
     <div class="container">
         <div class="page-title-content">
-            <h2>Enroll Now</h2>
+            <h1>Enroll Now</h1>
             <p>Fill the form for Enrollment</p>
         </div>
     </div>
