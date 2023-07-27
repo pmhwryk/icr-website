@@ -300,10 +300,8 @@
         <div class="row align-items-center">
             <div class="services-content it-service-content">
                 <div class="content left-content">
-                    <div class="icon" style="
-    display: none;
-">
-                        <img src="<?= STATIC_FRONT_ASSETS ?>img/icon1.png" alt="image">
+                <div class="icon">
+                        <img src="http://localhost/icr-website/static/front/theme1/assets/img/icon1.png" alt="image">
                     </div>
                     <h2>ICR - Place of Knowledge</h2>
                     <div style="text-align: justify;">

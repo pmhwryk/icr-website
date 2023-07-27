@@ -403,7 +403,7 @@
         <div class="row align-items-center">
             <div class="services-content it-service-content">
                 <div class="content left-content">
-                    <div class="icon">
+                    <div class="icon" style="display: none;">
                         <img src="<?= STATIC_FRONT_ASSETS ?>img/icon1.png" alt="image">
                     </div>
                     <h2>ICR - Place of Knowledge</h2>

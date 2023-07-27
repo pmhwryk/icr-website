@@ -90,7 +90,9 @@
 
             <div class="shape2"><img src="<?= STATIC_FRONT_IMAGE ?>shape/2.png" alt="image"></div>
             <div class="shape3"><img src="<?= STATIC_FRONT_IMAGE ?>shape/3.png" alt="image"></div>
-            <div class="shape6"><img src="<?= STATIC_FRONT_IMAGE ?>shape/6.png" alt="image"></div>
+            <div class="shape6" style="
+    display: none;
+"><img src="<?= STATIC_FRONT_IMAGE ?>shape/6.png" alt="image"></div>
         </div>
 
         <div class="funfacts-inner">
