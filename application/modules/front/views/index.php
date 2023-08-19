@@ -377,7 +377,7 @@
                                 }
                                 ?>
                                 <a href="<?= BASE_URL . 'course/' . $course_url ?>" class="read-more">
-                                    Read more
+                                    Read More
                                     <i class='bx bx-right-arrow-alt'></i>
                                 </a>
                             </div>
@@ -454,7 +454,7 @@
                                     if ($length > 50) {
                                         $myvar = substr(strip_tags($feature_item['description']), 0, 50);
                                         $myvar2 = '...';
-                                        $myvar3 = '<a href="#" class="read_more2" data-description="' . strip_tags($description) . '" data-id="' . $i . '">Read more</a>';
+                                        $myvar3 = '<a href="#" class="read_more2" data-description="' . strip_tags($description) . '" data-id="' . $i . '">Read More</a>';
                                         $final = $myvar . $myvar2 . $myvar3;
                                         ?><span id="hit-<?= $i ?>">
                                             <?php echo $final ?>

@@ -369,7 +369,7 @@
         }
 
         .spacle-nav .navbar .navbar-nav .nav-item a {
-            margin-left: 10px !important;
+            margin-left: 27px !important;
             margin-right: 10px !important;
         }
     </style>
@@ -410,9 +410,9 @@
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul style="margin-left:13px;font-size:14px;!important " class="navbar-nav">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a href="<?= BASE_URL ?>" class="nav-link">Home</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a href="<?= BASE_URL ?>about-us" class="nav-link">About Us</a>
                             </li>
@@ -422,9 +422,9 @@
                             <li class="nav-item">
                                 <a href="<?= BASE_URL ?>our-team" class="nav-link">Our Team</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a href="<?= BASE_URL ?>our-student" class="nav-link">Students</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a href="<?= BASE_URL ?>success-stories" class="nav-link">Success Stories</a>
                             </li>

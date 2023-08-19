@@ -47,7 +47,7 @@
                                 }
                                 ?>
                                 <a href="<?= BASE_URL . 'course/' . $course_url ?>" class="read-more">
-                                    Read more
+                                    Read More
                                     <i class='bx bx-right-arrow-alt'></i>
                                 </a>
                             </div>
