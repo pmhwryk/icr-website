@@ -391,7 +391,7 @@
         </div>
         <div class="others-options" style="text-align:right;">
             <a href="<?= BASE_URL ?>courses" class="default-btn">
-                <i class="bx bxs-hot"></i>View more<span></span>
+                <i class="bx bxs-hot"></i>View More<span></span>
             </a>
         </div>
     </div>
@@ -510,7 +510,7 @@
                 <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s" style="padding:30px">
                     <a href="https://www.peopleperhour.com/">
                         <img src="<?= STATIC_FRONT_ASSETS ?>img/platforms/freelancer_platform-4.png" alt="image"
-                            style=" max-width: 100%;height: 50px;" class="img-fluid">
+                            style=" max-width: 128%;height: 50px;" class="img-fluid">
                     </a>
                 </div>
             </div>

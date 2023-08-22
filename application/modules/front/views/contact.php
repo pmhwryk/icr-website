@@ -28,20 +28,22 @@ input[type="number"] {
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="contact-info-box">
-                    <div class="icon" style="width: 50px; height: 50px; background-color: #f7f7f7; border-radius: 50%; line-height: 1.8; text-align: center; font-size:30px; color: #00B0E8;">
+                    <div class="icon" style=" text-align: center; font-size:30px; color: #00B0E8; display: flex;">
                         <i class='bx bx-map'></i>
+                        <h3 style="color:black; margin-left: 10px;">Our Address</h3>
                     </div>
-                    <h3>Our Address</h3>
+                    
                     <p><?= ((isset($general_setting['address']) && !empty($general_setting['address'])) ? $general_setting['address'] : '') ?></p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="contact-info-box">
-                    <div class="icon" style="width: 50px; height: 50px; background-color: #f7f7f7; border-radius: 50%; line-height: 1.8; text-align: center; font-size:30px; color: #00B0E8;">
+                    <div class="icon" style=" text-align: center; font-size:30px; color: #00B0E8; display: flex;" >
                         <i class='bx bx-phone-call'></i>
+                        <h3 style="color:black; margin-left: 10px;">Contact</h3>
                     </div>
-                    <h3>Contact</h3>
-                    <p>Mobile:
+                    
+                    <p style="margin-bottom:0px;">Mobile:
                         <a href="tel:<?= ((isset($general_setting['phone']) && !empty($general_setting['phone'])) ? $general_setting['phone'] : '') ?>"><?= ((isset($general_setting['phone']) && !empty($general_setting['phone'])) ? $general_setting['phone'] : '') ?></a>
                     </p>
                     <p>E-mail: <a href="mailto:<?= ((isset($general_setting['email']) && !empty($general_setting['email'])) ? $general_setting['email'] : '') ?>"><?= ((isset($general_setting['email']) && !empty($general_setting['email'])) ? $general_setting['email'] : '') ?></a></p>

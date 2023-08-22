@@ -1943,7 +1943,10 @@ Services Area CSS
   margin-right: 3px;
   color: #00b0e8;
 }
+.read_more2{
+  color: #00b0e8;
 
+}
 /*================================================
 Video Presentation Area CSS
 =================================================*/
@@ -2837,6 +2840,7 @@ Features Area CSS
   border-radius: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  max-height: 100vh;
 }
 
 .features-box-one:hover {
@@ -3322,7 +3326,7 @@ Feedback Area CSS
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 50%;
-  border: 1px solid #ffffff;
+  border: 1px solid #00B0E8;
   position: relative;
 }
 
@@ -3336,7 +3340,7 @@ Feedback Area CSS
   bottom: 0;
   border-radius: 50%;
   margin: 2px;
-  background-color: #ffffff;
+  background-color: #00B0E8;
   -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: 0.5s;
@@ -5536,7 +5540,7 @@ Features Area CSS
 
 .subscribe-content {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   border-radius: 30px;
   text-align: center;
   padding: 70px;
@@ -5673,8 +5677,8 @@ Features Area CSS
 .shape14 {
   position: absolute;
   left: 5%;
-  top: 0;
-  z-index: -1;
+  top: 10px;
+  /* z-index: -1; */
 
 }
 
@@ -5682,14 +5686,14 @@ Features Area CSS
 .shape14 img {
   -webkit-animation: moveLeftBounce 5s linear infinite;
   animation: moveLeftBounce 5s linear infinite;
-  width: 30%;
+  width: 50%;
 }
 
 .shape15 {
   position: absolute;
   right: 2%;
   top: 4%;
-  z-index: -1;
+  /* z-index: -1; */
   width: 20%;
 }
 .shape15 img{
@@ -5701,8 +5705,7 @@ Features Area CSS
   position: absolute;
   left: 0;
   bottom: 12px;
-  z-index: -1;
-
+  /* z-index: -1; */
 }
 .shape16 img{
   -webkit-animation: moveLeftBounce 5s linear infinite;
@@ -5713,8 +5716,8 @@ Features Area CSS
 .shape17 {
   position: absolute;
 left: 70%;
-  bottom: 0%;
-  z-index: -1;
+  bottom: 12%;
+  /* z-index: -1; */
 
 }
 .shape17 img{
@@ -5725,14 +5728,13 @@ left: 70%;
 
 .shape18 {
   position: absolute;
-  z-index: -1;
-  right: 54%;
+  right: 64%;
   top: 32%;
 }
 .shape18 img{
   -webkit-animation: moveLeftBounce 5s linear infinite;
   animation: moveLeftBounce 5s linear infinite;
-  width: 30%;
+  width: 50%;
 }
 
 /*================================================
@@ -5767,7 +5769,6 @@ Free Trial Area CSS
   position: absolute;
   /* right: 30%; */
   bottom: 25%;
-  z-index: -1;
   left: 60%;
 }
 
@@ -5780,27 +5781,26 @@ Free Trial Area CSS
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  width: 30%;
+  width: 54%;
 }
 
 .shape11 {
   position: absolute;
   left: 25%;
   bottom: 27%;
-  z-index: -1;
+
 }
 
 .shape11 img {
   -webkit-animation: moveBounce 5s linear infinite;
   animation: moveBounce 5s linear infinite;
-  width: 20%;
+  width: 50%;
 }
 
 .shape12 {
   position: absolute;
   left: 10%;
-  bottom: 50%;
-  z-index: -1;
+  bottom: 60%;
 }
 
 .shape12 img {
@@ -5812,14 +5812,14 @@ Free Trial Area CSS
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  width: 20%;
+  width: 50%;
 }
 
 .shape13 {
   position: absolute;
   /* right: 18%; */
   bottom: 60%;
-  z-index: -1;
+
   left: 80%;
 }
 
@@ -5832,7 +5832,7 @@ Free Trial Area CSS
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  width: 50%;
+  width: 68%;
 }
 
 /*================================================
@@ -6168,7 +6168,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .services-list li a:hover {
-  color: black;
+  color: white;
   padding-left: 5px;
 }
 
@@ -6193,7 +6193,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .support-list li a:hover {
-   color: black;
+   color: white;
   padding-left: 5px;
 }
 
@@ -6218,7 +6218,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .footer-contact-info li a:hover {
-  color: #676767;
+  color:white;
 }
 
 .single-footer-widget .social {
@@ -6268,7 +6268,7 @@ Footer Area CSS
 }
 
 .copyright-area p a:hover {
-  color: #0a0b0b;
+  color: white;
 }
 
 @-webkit-keyframes imageChange {

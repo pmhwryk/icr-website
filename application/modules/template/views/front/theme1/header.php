@@ -11,15 +11,15 @@
     ?>
     <meta charset="utf-8">
     <?php
-        if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
-            $url = "https://";
-        else
-            $url = "http://";
-        // Append the host(domain name, ip) to the URL.   
-        $url .= $_SERVER['HTTP_HOST'];
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        $url = "https://";
+    else
+        $url = "http://";
+    // Append the host(domain name, ip) to the URL.   
+    $url .= $_SERVER['HTTP_HOST'];
 
-        // Append the requested resource location to the URL   
-        $url .= $_SERVER['REQUEST_URI'];
+    // Append the requested resource location to the URL   
+    $url .= $_SERVER['REQUEST_URI'];
     ?>
     <link rel="canonical" href="<?= $url; ?>">
     <title>
@@ -103,10 +103,10 @@
     <!-- jQuery Min JS -->
     <script src="<?= STATIC_FRONT_ASSETS ?>js/jquery.min.js"></script>
     <!-- Meta Pixel Code -->
-	<link href="<?= STATIC_ADMIN_CSS ?>toastr.css">
+    <link href="<?= STATIC_ADMIN_CSS ?>toastr.css">
 
     <!-- Start SEO Schema -->
-    <link rel="stylesheet" href="<?php echo STATIC_ADMIN_CSS?>toastr.css">
+    <link rel="stylesheet" href="<?php echo STATIC_ADMIN_CSS ?>toastr.css">
 
     <script src="//code.tidio.co/v4jaoozj1dgxz6ryfshbtn7dov2rcjlb.js" async></script>
 
@@ -195,6 +195,22 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XQV8QGVS5"></script>
     <script>
+    jQuery(function($) {
+    
+	var path = window.location.href; 
+	 
+     $('ul a').each(function() {
+     
+	 if (this.href === path) {
+      
+	  $(this).addClass('active');
+      
+	  }
+    
+	});
+});
+
+
         window.dataLayer = window.dataLayer || [];
 
         function gtag() {
@@ -372,6 +388,11 @@
             margin-left: 27px !important;
             margin-right: 10px !important;
         }
+
+        /* Active effect */
+        .active {
+    color:#ff000; 
+}
     </style>
 </head>
 

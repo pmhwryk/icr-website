@@ -1,3 +1,19 @@
+<style>
+    #more {
+        display: none;
+    }
+    #myBtn{
+        border: hidden;
+    background: transparent;
+    color: #00B0E8;
+    text-decoration: underline;
+    cursor: pointer;
+    }
+    #myBtn:hover{  
+    text-decoration: none;
+    }
+
+</style>
 <!-- Start Page Title Area -->
 <div class="page-title-area">
     <div class="container">
@@ -14,24 +30,31 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
-                <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s">
+                <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s" >
                     <img src="<?= STATIC_FRONT_IMAGE ?>our-mission.png" alt="Our Mission" class="icon">
                     <h3>Our Mission</h3>
-                    <p style="text-align: justify;">The primary purpose of ICR is to provide a learning environment where students can explore the hidden knowledge of IT and can create wonders in the IT market.</p>
+                    <p style="text-align:start ;">The primary purpose of ICR is to provide a learning environment where
+                        students can explore the hidden knowledge of IT and can create wonders in the IT market.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s">
+                <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s" style="padding-bottom: 53px;">
                     <img src="<?= STATIC_FRONT_IMAGE ?>our-vision.png" alt="Our Vision" class="icon">
                     <h3>Our Vision</h3>
-                    <p style="text-align: justify;">With 1000+ Alumni, ICR has the vision to develop confident and responsible individuals who are aspiring to achieve their goal.</p>
+                    <p style="text-align: start;">With 1000+ Alumni, ICR has the vision to develop confident and
+                        responsible individuals who are aspiring to achieve their goal.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s">
+                <div class="features-box-one wow fadeInLeft" data-wow-delay=".1s" style="padding-bottom: 53px;">
                     <img src="<?= STATIC_FRONT_IMAGE ?>our-values.png " alt="Our Values" class="icon">
                     <h3>Our Values</h3>
-                    <p style="text-align: justify;">Through our technologically advanced infrastructure, ICR is among the major focus of IT Training. We deliver skills to locals from any part of the world via innovative methodologies that comprise of lectures and dedicated access to equipment racks.</p>
+                    <p style="text-align:  start;">Through our technologically advanced infrastructure, ICR is among the
+                        major focus of IT Training.<span id="dots">...</span><span id="more"> We deliver skills to
+                            locals from any part of the world via innovative methodologies that comprise of lectures and
+                            dedicated access to equipment racks.</span></p>
+                    <button onclick="myFunction()" id="myBtn">Read more</button>
+                    
                 </div>
             </div>
         </div>
@@ -44,7 +67,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12 col-md-12" style="text-align:justify;padding-bottom:10px;">
-                <p><strong><?= ((isset($general_setting['about_heading']) && !empty($general_setting['about_heading'])) ? $general_setting['about_heading'] : '') ?></strong><br /> <?= ((isset($general_setting['about_us']) && !empty($general_setting['about_us'])) ? $general_setting['about_us'] : '') ?></p>
+                <p><strong>
+                        <?= ((isset($general_setting['about_heading']) && !empty($general_setting['about_heading'])) ? $general_setting['about_heading'] : '') ?>
+                    </strong><br />
+                    <?= ((isset($general_setting['about_us']) && !empty($general_setting['about_us'])) ? $general_setting['about_us'] : '') ?>
+                </p>
             </div>
         </div>
     </div>
@@ -54,13 +81,13 @@
 <!-- Start Partner Area -->
 <section class="partner-area pt-70 pb-70">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-3 col-md-12">
+        <div class="row align-items-center text-center">
+            <div class="col-lg-12 col-md-12 pb-3">
                 <div class="partner-title">
-                    <h3>Our Partners:</h3>
+                    <h3 style="font-size:30px;">Our Partners</h3>
                 </div>
             </div>
-            <div class="col-lg-9 col-md-12">
+            <div class="col-lg-12 col-md-12">
                 <div class="partner-slides owl-carousel owl-theme">
 
                     <div class="single-partner-item">
@@ -126,3 +153,21 @@
     <div class="shape13"><img src="<?= STATIC_FRONT_IMAGE ?>shape/Frame 7.png" alt="image"></div>
 </section>
 <!-- End Free Trial Area -->
+
+<script>
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+</script>
