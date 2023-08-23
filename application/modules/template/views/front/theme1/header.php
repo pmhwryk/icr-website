@@ -195,20 +195,20 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2XQV8QGVS5"></script>
     <script>
-    jQuery(function($) {
-    
-	var path = window.location.href; 
-	 
-     $('ul a').each(function() {
-     
-	 if (this.href === path) {
-      
-	  $(this).addClass('active');
-      
-	  }
-    
-	});
-});
+        jQuery(function ($) {
+
+            var path = window.location.href;
+
+            $('ul a').each(function () {
+
+                if (this.href === path) {
+
+                    $(this).addClass('active');
+
+                }
+
+            });
+        });
 
 
         window.dataLayer = window.dataLayer || [];
@@ -391,8 +391,8 @@
 
         /* Active effect */
         .active {
-    color:#ff000; 
-}
+            color: #ff000;
+        }
     </style>
 </head>
 
@@ -469,9 +469,32 @@
                         </ul>
                     </div>
                 </nav>
+
             </div>
+
         </div>
+        <div id="main">
+            <!-- Hide the menu icon when the side navigation menu is open -->
+            <span class="menu-icon hide-icon" onclick="toggleNav()" id="menuIconHidden">&#9776;</span>
+        </div>
+        <!-- Side Navigation -->
+        <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+            <!-- Add your side navigation links here -->
+            <a href="<?= BASE_URL ?>about-us" class="nav-link">About Us</a>
+            <a href="<?= BASE_URL ?>courses" class="nav-link">Courses</a>
+            <a href="<?= BASE_URL ?>courses" class="nav-link">Courses</a>
+            <a href="<?= BASE_URL ?>success-stories" class="nav-link">Success Stories</a>
+            <a href="<?= BASE_URL ?>contact-us" class="nav-link">Contact Us</a>
+            <a href="<?= BASE_URL ?>free-opportunities" class="nav-link">Free Opportunities</a>
+            <a href="<?= BASE_URL ?>enroll-now" class="default-btn">
+                <i class="bx bx-log-in"></i> Enroll Now
+            </a>
+        </div>
+
     </div>
+
+
 
     <!-- <div class="call" style="position:fixed;z-index:9999;right:120px;bottom:30px">
         <a href="tel:+919033012100" class="intro-banner-vdo-play-btn pinkBg">
@@ -486,3 +509,45 @@
         </a>
     </div> -->
     <!-- End Navbar Area -->
+    <script>
+    function toggleNav() {
+        var sidenav = document.getElementById("mySidenav");
+        var mainContent = document.getElementById("main");
+        var menuIconHidden = document.getElementById("menuIconHidden");
+
+        if (sidenav.style.width === "0px" || sidenav.style.width === "") {
+            if (window.innerWidth >= 426) {
+                sidenav.style.width = "50%";
+                mainContent.style.marginRight = "50%";
+            } else {
+                sidenav.style.width = "100%";
+                mainContent.style.marginRight = "100%";
+            }
+            menuIconHidden.style.display = "none";
+        } else {
+            sidenav.style.width = "0";
+            mainContent.style.marginRight = "0";
+            menuIconHidden.style.display = "block";
+        }
+    }
+
+    // Add event listener to handle window resize
+    window.addEventListener("resize", function () {
+        var screenWidth = window.innerWidth;
+        var sidenav = document.getElementById("mySidenav");
+        var mainContent = document.getElementById("main");
+        var menuIconHidden = document.getElementById("menuIconHidden");
+
+        if (screenWidth > 978) {
+            sidenav.style.width = "0";
+            mainContent.style.marginRight = "0";
+            menuIconHidden.style.display = "none";
+        } else {
+            if (sidenav.style.width === "50%") {
+                menuIconHidden.style.display = "none";
+            } else {
+                menuIconHidden.style.display = "block";
+            }
+        }
+    });
+</script>

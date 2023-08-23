@@ -449,21 +449,21 @@ Navbar Area CSS
   display: none;
 }
 
-/* .navbar-area {
+.navbar-area {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: white;
   height: auto;
   z-index: 1040;
   padding-top: 5px;
   padding-bottom: 5px;
-} */
+}
 
 .navbar-area {
   width: 100%;
-  background-color: transparent;
+  background-color: white;
   height: auto;
   z-index: 1040;
   padding-top: 5px;
@@ -942,7 +942,7 @@ Navbar Area CSS
   }
 
   .spacle-responsive-nav .spacle-responsive-menu.mean-container .mean-nav {
-    margin-top: 72px;
+    /* margin-top: 72px; */
     /* Mega dropdown menu */
   }
 
@@ -1022,8 +1022,92 @@ Navbar Area CSS
   }
 
   .spacle-nav {
-    display: none;
+    display:none ;
   }
+}
+
+/* .............................. */
+
+
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	right: 0;
+	background-color: #00B0E8;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+  }
+  
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+	color: var(--sun-main);
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  #main {
+	padding: 16px;
+	display: none;
+  }
+  
+  .menu-icon {
+	font-size: 30px;
+	cursor: pointer;
+  }
+  
+  .hide-icon {
+	display: none;
+  }
+
+
+  @media (max-width: 986px) {
+	.menu-icon {
+	  display: none;
+    color: #00B0E8;
+	}
+	#main {
+		display: block;
+    position: absolute;
+    right: 10px;
+    top: 0;
+	  }
+	/* Show the hidden menu icon when the side navigation is open */
+	.hide-icon {
+	  display: block;
+	}
+  .default-btn {
+    text-align: left;
+}
+.default-btn{
+  margin-left: 20px;
+  text-align: start;
+}
+.default-btn i {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+
+
+}
 }
 
 /*================================================
@@ -2840,7 +2924,7 @@ Features Area CSS
   border-radius: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  max-height: 100vh;
+  max-height: 126vh;
 }
 
 .features-box-one:hover {
